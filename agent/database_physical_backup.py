@@ -379,7 +379,7 @@ def run_sql_query(db: CustomPeeweeDB, query: str) -> list[str]:
 def kill_other_db_connections(db: CustomPeeweeDB, thread_ids: list[int]):
     """
     We deactivate site before backup/restore and activate site after backup/restore.
-    But, connection through ProxySQL or Frappe Cloud devtools can still be there.
+    But, connection through ProxySQL or Hedge devtools can still be there.
 
     it's important to kill all the connections except current threads.
     """
